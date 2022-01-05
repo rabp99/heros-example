@@ -1,10 +1,10 @@
 const table_hero = document.querySelector('#row-heros');
 //const table_hero = document.getElementById('row-heros');
 
-//showHeros();
-showPokemons();
+showHeros();
+//showPokemons();
 async function showHeros() {
-    const response = await fetch("backend/superheros/get-heros.php", {
+    const response = await fetch("backend/heroes/get-heroes.php", {
       method: "get",
       headers: {
         "Content-Type": "aplication/json",
@@ -16,7 +16,7 @@ async function showHeros() {
     for (let hero of heros) {
       filas += `
               <tr>
-                  <td>${hero.image}</td>                 
+                  <td><img class="hero-image" src="backend\\${hero.image}" alt="${hero.hero_name}"></td>
                   <td>${hero.hero_name}</td>
                   <td>${hero.actor_name}</td>
                   <td>${hero.nation}</td>
