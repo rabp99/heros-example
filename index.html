@@ -11,6 +11,21 @@
     <h1>
         Lista de Super Héroes
     </h1>
+    <form id='frm_new_hero'>
+        <p>
+            <input id='hero_name' type="text" name="superheroe" placeholder="Super Héroe">
+        </p>
+        <p>
+            <input id='actor_name' type="text" name="actor" placeholder="Actor">
+        </p>
+        <p>
+            <input id='nation' type="text" name="pais" placeholder="País">
+        </p>
+        <p>
+            <input id='cell_phone' type="text" name="telefono" placeholder="Teléfono">
+        </p>
+        <button type="submit">Guardar Nuevo Héroe</button>
+    </form>
     <table id="table-heros">
         <thead>
             <th>
@@ -28,10 +43,13 @@
             <th>
                 Teléfono
             </th>
+            <th>
+                Acciones
+            </th>
         </thead>
         <tbody id="row-heros">
             <tr>
-                <td colspan="5">
+                <td colspan="6">
                     <h3>
                         Cargando información
                     </h3>

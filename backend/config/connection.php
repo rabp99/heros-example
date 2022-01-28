@@ -1,13 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "superheroes";
+class Connection {
+  private $servername = "localhost";
+  private $username = "root";
+  private $password = "";
+  private $dbname = "superheroes";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+  public function getConnection() {
+    $dbn = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+    return $dbn;
+  }
 }
